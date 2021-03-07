@@ -1,10 +1,10 @@
 <?php
     include "header.php";
-    include "dbconection.php";
+    //include "wypisywaniezbazy.php";
 ?>
 
 
-    <!-- <div class="highlight-clean">
+ <div class="highlight-clean">
         <div class="container">
             <div class="intro">
                 <h2 class="text-center">Kupuj bez obaw</h2>
@@ -12,22 +12,58 @@
                 <form class="search-form">
                     <div class="input-group">
                         <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span></div><input class="form-control" type="text" placeholder="Szukaj mamusiek z okolicy">
-                        <div class="input-group-append"><button class="btn btn-light" type="button">Search </button></div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <form class="search-form">
+                        <div class="input-group-append"><button class="btn btn-light" type="button">Szukaj </button></div>
+                        <form class="search-form">
             <div class="input-group">
                 <div class="input-group-prepend"></div>
                 <div class="input-group-append"></div>
             </div>
         </form>
     </div>
+    <form action="#" method="post">
+                <span>
+                    <label for="kategoria">Kategoria</label>
+                    <select class="form-select" name="kategoria" id="kat">
+                        <option value="">wszystko</option>
+                        <option value='where kategoria="monitor"'>Monitor</option>
+                        <option value='where kategoria="mysz"'>Mysz</option>
+                        <option value='where kategoria="procesor"'>Procesor</option>
+                        <option value='where kategoria="karta_graf"'>Karta graficzna</option>
+                        <option value='where kategoria="głośniki"'>Głośniki</option>
+                    </select>
+                </span>
+                <span>
+                    <label for="sort">Sortowanie</label>
+                    <select name="sort" id="sort">
+                        <option value="order by nazwa asc">nazwa rosnąco</option>
+                        <option value="order by nazwa desc">nazwa malejąco</option>
+                        <option value="order by cena asc">cena rosnąco</option>
+                        <option value="order by cena desc">cena malejąco</option>
+                    </select>
+                </span>
+                <span>
+                    <input type="submit" value="Szukaj">
+                </span>
+            </form>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        
+        
+
+    
+    
     <div class="container">
         <div class="row product-list dev">
-            <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
-                <div class="product-container">
+        
+          
+
+            <?php
+    include "wypisywaniezbazy.php";
+?>
+             <!--   <div class="product-container">
                     <div class="row">
                         <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/iphone6.jpg"></a></div>
                     </div>
@@ -49,10 +85,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>-->
+            
         </div>
-    </div> -->
+    </div> 
 <?php
 include "footer.php";
 ?>

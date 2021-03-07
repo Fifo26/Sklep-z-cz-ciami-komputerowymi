@@ -1,4 +1,4 @@
-<php?
+<?php
     include "header.php";
 ?>
 
@@ -6,7 +6,10 @@
     <header>
         <div class="header-dark" style="background-image:url(&quot;assets/img/696778.jpg&quot;);">
             <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-                <div class="container"><a class="navbar-brand" href="#">Sklep Fifa</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="container"><a class="navbar-brand" href="#">All For Computers</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1">
+                <span class="sr-only"></span>
+                <span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse"
                         id="navcol-1">
                         <ul class="nav navbar-nav">
@@ -103,24 +106,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-basic">
-        <footer>
-            <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Główna</a></li>
-                <li class="list-inline-item"><a href="#">Google</a></li>
-                <li class="list-inline-item"><a href="#">ZPiSO</a></li>
-                <li class="list-inline-item"><a href="#">Zaloguj</a></li>
-                <li class="list-inline-item"><a href="#">Jakaś stronka</a></li>
-            </ul>
-            <p class="copyright">Copiraty by Fifo Boroń und Kacomajster © 2021</p>
-        </footer>
-    </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.8.2/js/lightbox.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
-    <script src="assets/js/script.min.js"></script>
-</body>
-
-</html>
+    
+    <?php
+include "footer.php";
+?>

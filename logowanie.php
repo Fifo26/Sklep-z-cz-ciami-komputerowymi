@@ -3,30 +3,37 @@
 ?>
 <main> 
     <?php
-        if(!empty($_POST["loginl"])){
-            $logl=$_POST["loginl"];
+    //kasuje zapisane w pamieci zmienne
+     $logl = $pasl ="";
+    
+    
+        if(!empty(trim($_POST["loginl"]))){
+            $logl=trim($_POST["loginl"]);
         }
         else {
             $logl=NULL;
             echo "<br>Nie podałeś imienia!!<br>";
         }
-        if(!empty($_POST["passl"])){
+        if(!empty(trim($_POST["passl"]))){
             $pasl=$_POST["passl"];
         }
         else {
             $pasl=NULL;
             echo "<br>Nie podałeś imienia!!<br>";
         }
-        $polaczenie=mysqli_connect("localhost", "root", "", "czesci_komp");
-        if($polaczenie->connect_error){
-            die("Connection failed:".$polaczenie->connect_error);
-            echo "coś nie działa :(";
+        
+        require_once "connect.php";
+    
         }
         else if(mysqli_num_rows(mysqli_query($polaczenie,"select login from klienci where haslo='$pasl'"))==1){
             echo "<h2>Zalogowano</h2>";
-            echo "<h3>Przejdź na <a href='index.php'>stronę główną</a></h3>";
+            // ustawiam zmienne sesji żeby wiedzieć że jestem zalogowany 
+                            $_SESSION["loggedin"] = true; //że zalogowany
+                            $_SESSION["loginl"] = loginl;    // będzie witaj login, np. grzes
+            header("location: index.php");
+            
             }
-        else echo "logowanie nie powiodło się <a href='panel_log_rej.php'>kliknij</a>, aby spróbować ponownie:( ";
+        else echo "logowanie nie powiodło się <a href='login.php'>kliknij</a>, aby spróbować ponownie:( ";
 
 
 

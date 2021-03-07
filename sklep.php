@@ -1,10 +1,10 @@
 <?php
     include "header.php";
-    include "dbconection.php";
+    //include "wypisywaniezbazy.php";
 ?>
 
 
-    <!-- <div class="highlight-clean">
+ <div class="highlight-clean">
         <div class="container">
             <div class="intro">
                 <h2 class="text-center">Kupuj bez obaw</h2>
@@ -26,8 +26,13 @@
     </div>
     <div class="container">
         <div class="row product-list dev">
-            <div class="col-sm-6 col-md-4 product-item animation-element slide-top-left">
-                <div class="product-container">
+        
+          
+
+            <?php
+    include "wypisywaniezbazy.php";
+?>
+             <!--   <div class="product-container">
                     <div class="row">
                         <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/iphone6.jpg"></a></div>
                     </div>
@@ -49,10 +54,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div>-->
+            
         </div>
-    </div> -->
+    </div> 
 <?php
 include "footer.php";
 ?>

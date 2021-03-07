@@ -8,8 +8,7 @@ if(isset($_SESSION['blad']))
 echo $_SESSION['blad'];
 
 ## jeżeli jesteś zalogowany automatycznie przekieruje cie do strony głównej, nie da sie logować 2 razy 
- if(isset($_SESSION['loggedin']) && ($_SESSION['loggedin']== true))
-{
+ if(isset($_SESSION['loggedin']) && ($_SESSION['loggedin']== true)){
 	header('Location: index.php');
 	exit();
 }   
@@ -23,7 +22,7 @@ require_once "connect.php";
 
 <body>
     <div class="login-clean">
-        <form action="logowanie.php" method="post">
+        <form action="login_action.php" method="post">
             <h2 class="sr-only">Login</h2>
             <div class="illustration"><i class="icon ion-ios-navigate"></i>
                 <h2 class="text-center"><strong>Zaloguj</strong></h2>

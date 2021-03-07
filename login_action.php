@@ -5,7 +5,7 @@
     <?php
     //kasuje zapisane w pamieci zmienne
      $logl = $pasl ="";
-    
+     require_once "connect.php";
     
         if(!empty(trim($_POST["loginl"]))){
             $logl=trim($_POST["loginl"]);
@@ -22,10 +22,7 @@
             echo "<br>Nie podałeś imienia!!<br>";
         }
         
-        require_once "connect.php";
-    
-        }
-        else if(mysqli_num_rows(mysqli_query($polaczenie,"select login from klienci where haslo='$pasl'"))==1){
+        if(mysqli_num_rows(mysqli_query($polaczenie,"select login from klienci where haslo='$pasl'"))==1){
             echo "<h2>Zalogowano</h2>";
             // ustawiam zmienne sesji żeby wiedzieć że jestem zalogowany 
                             $_SESSION["loggedin"] = true; //że zalogowany

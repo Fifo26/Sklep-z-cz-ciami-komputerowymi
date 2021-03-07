@@ -1,75 +1,31 @@
 <?php
     include "header.php";
 ?>
-<main> 
-    <?php
-        $ifok=0;
-        if(!empty($_POST["imie"])){
-            $imie=$_POST["imie"];
-        }
-        else {
-            $imie=NULL;
-            echo "<br>Nie podałeś imienia!!<br>";
-            $ifok++;
-        }
-        if(!empty($_POST['mail'])){
-            $mail=$_POST['mail'];
-        }
-        else {
-            $mail=NULL;
-            echo "Nie podałeś e-maila!!<br>";
-            $ifok++;
-        }
-        if(!empty($_POST['login'])){
-            $login=$_POST['login'];
-        }
-        else {
-            $login=NULL;
-            echo "Nie podałeś loginu!!<br>";
-            $ifok++;
-        }
-        if(!empty($_POST['pass'])){
-            $haslo=$_POST['pass'];
-        }
-        else {
-            $haslo=NULL;
-            echo "Nie podałeś hasła!!<br>";
-            $ifok++;
-        }
-        if(!empty($_POST['passcheck'])){
-            $hasloch=$_POST['passcheck'];
-        }
-        else {
-            $hasloch=NULL;
-            echo "Podane hasła się różnią!!<br>";
-            $ifok++;
-        }
-        $polaczenie=mysqli_connect("localhost", "root", "", "czesci_komp");
-        if($polaczenie->connect_error){
-            die("Connection failed:".$polaczenie->connect_error);
-            echo "coś nie działa :(";
-        }
-        else if($ifok==0){
-            if($haslo==$hasloch){
-                if(isset($_POST['reg'])){
-                $wstawu="insert into klienci values ('$imie','$mail','$login','$haslo');";
-                mysqli_query($polaczenie,$wstawu);
-                echo "Konto <b>".$imie."</b> zostało zarejestrowane w sklepie muzycznym <a href='panel_log_rej.php'>kliknij</a>, aby się zalogować";
+
+<body>
+     <div class="register-photo">
+        <div class="form-container">
+            <div class="image-holder" style="background-image:url(&quot;assets/img/desk.jpg&quot;);"></div>
+            <form id="rej" action="rejestracja_action.php" method="post">
+                <h2 class="text-center"><strong>Rejestruje się</strong></h2>
                 
-                mysqli_close($polaczenie);
-                }
-                else{
-                    echo "Musisz zaakceptować regulamin!";
-                }
-            }
-            else echo "Podane hasła się różnią!!<br>";
-        }
-        else{
-            echo "Musisz uzupełnić wszystkie pola";
-        }
+                <div class="form-group"><input class="form-control" type="text" name="imie" id="imie" placeholder="Imię"></div>
+                    
+                <div class="form-group"><input class="form-control" type="text" name="mail" id="mail"placeholder="Email"></div>
+                
+                
+                <div class="form-group"><input class="form-control" type="text" name="login" id="login" placeholder="login"></div>
+
+                <div class="form-group"><input class="form-control" type="password" name="pass" id="pass" placeholder="Hasło"></div>
+                
+                <div class="form-group"><input class="form-control" type="password" name="passcheck" id="passch" placeholder="Powtórz hasło"></div>
+                
+                <div class="form-group">
+                    <div class="form-check"><label class="form-check-label"><input class="form-check-input" name="reg" type="checkbox">Zgadzam się na warunki zawłaszenia mienia.</label></div>
+                </div>
+                <div class="form-group"><button class="btn btn-primary btn-block" type="submit">Zaloguj</button></div><a href="login.php" class="already">Masz już konto? Zaloguj się tutaj.</a></form>
+        </div>
+    </div>
+    <?php
+    include "footer.php";
     ?>
-    
-</main>
-<?php
-include "footer.php";
-?>

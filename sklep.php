@@ -1,26 +1,33 @@
 <?php
     include "header.php";
     //include "wypisywaniezbazy.php";
+    include "navibar.php";
 ?>
-
-
+ <form action="#" method="post">
  <div class="highlight-clean">
         <div class="container">
             <div class="intro">
-                <h2 class="text-center">Kupuj bez obaw</h2>
-                <p class="text-center">taniej niż u twojej mamy&nbsp;</p>
-                <form class="search-form">
+                <h2 class="text-center">Witaj w sklepie!</h2>
+                <p class="text-center">taniej niż u konkurencji</p>
+                <!-- <form class="search-form"> -->
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span></div><input class="form-control" type="text" placeholder="Szukaj mamusiek z okolicy">
-                        <div class="input-group-append"><button class="btn btn-light" type="button">Szukaj </button></div>
-                        <form class="search-form">
-            <div class="input-group">
-                <div class="input-group-prepend"></div>
-                <div class="input-group-append"></div>
-            </div>
-        </form>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                        <input class="form-control" name="searchdb" type="text" placeholder="Czego ci trzeba?">
+                        <div class="input-group-append">
+                            <button class="btn btn-light" type="submit">Szukaj </button>
+                    </div>
+                        <!-- <form class="search-form"> -->
+                    <div class="input-group">
+                        <div class="input-group-prepend"></div>
+                        <div class="input-group-append"></div>
+                    </div>
+                <!-- </form> -->
     </div>
-    <form action="#" method="post">
+    
                 <span>
                     <label for="kategoria">Kategoria</label>
                     <select class="form-select" name="kategoria" id="kat">
@@ -42,7 +49,7 @@
                     </select>
                 </span>
                 <span>
-                    <input type="submit" value="Szukaj">
+                    <!-- <input type="submit" value="Szukaj"> -->
                 </span>
             </form>
                     </div>
@@ -61,8 +68,8 @@
           
 
             <?php
-    include "wypisywaniezbazy.php";
-?>
+                include "wypisywaniezbazy.php";
+            ?>
              <!--   <div class="product-container">
                     <div class="row">
                         <div class="col-md-12"><a href="#" class="product-image"><img src="assets/img/iphone6.jpg"></a></div>

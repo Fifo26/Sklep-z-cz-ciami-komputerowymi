@@ -2,11 +2,11 @@
         <footer>
             <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
             <ul class="list-inline">
-                <li class="list-inline-item"><a href="#">Główna</a></li>
-                <li class="list-inline-item"><a href="#">Google</a></li>
-                <li class="list-inline-item"><a href="#">ZPiSO</a></li>
-                <li class="list-inline-item"><a href="#">Zaloguj</a></li>
-                <li class="list-inline-item"><a href="#">Jakaś stronka</a></li>
+                <li class="list-inline-item"><a href="index.php">Główna</a></li>
+                <li class="list-inline-item"><a href="sklep.php">Sklep</a></li>
+                <li class="list-inline-item"><a href="http://www.lo-skala.edu.pl/">ZPiSO</a></li>
+                <li class="list-inline-item"><a href="login.php">Zaloguj</a></li>
+                <li class="list-inline-item"><a href="rejestracja.php">Rejestracja</a></li>
             </ul>
             <p class="copyright">Copiraty by Filip Boroń © 2021</p>
         </footer>

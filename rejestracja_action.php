@@ -54,7 +54,7 @@
                 if(isset($_POST['reg'])){
                 $wstawu="insert into klienci values ('$imie','$mail','$login','$haslo');";
                 mysqli_query($polaczenie,$wstawu);
-                echo "Konto <b>".$imie."</b> zostało zarejestrowane w sklepie muzycznym <a href='login.php'>kliknij</a>, aby się zalogować";
+                echo "Konto <b>".$imie."</b> zostało zarejestrowane w sklepie, <a href='login.php'>kliknij</a>, aby się zalogować";
                 
                 mysqli_close($polaczenie);
                 }

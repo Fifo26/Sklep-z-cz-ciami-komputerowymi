@@ -11,8 +11,15 @@
                 <p class="text-center">taniej niż u twojej mamy&nbsp;</p>
                 <form class="search-form">
                     <div class="input-group">
-                        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span></div><input class="form-control" type="text" placeholder="Szukaj mamusiek z okolicy">
-                        <div class="input-group-append"><button class="btn btn-light" type="button">Search </button></div>
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                        <input class="form-control" type="text" placeholder="Szukaj mamusiek z okolicy">
+                        <div class="input-group-append">
+                            <button class="btn btn-light" type="button">Search </button>
+                        </div>
                     </div>
                 </form>
             </div>

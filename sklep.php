@@ -41,7 +41,7 @@
                 </span>
                 <span>
                     <label for="sort">Sortowanie</label>
-                    <select name="sort" id="sort">
+                    <select class="form-select" name="sort" id="sort">
                         <option value="order by nazwa asc">nazwa rosnąco</option>
                         <option value="order by nazwa desc">nazwa malejąco</option>
                         <option value="order by cena asc">cena rosnąco</option>

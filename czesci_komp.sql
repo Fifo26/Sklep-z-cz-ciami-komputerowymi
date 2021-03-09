@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 07 Mar 2021, 20:09
+-- Czas generowania: 09 Mar 2021, 11:36
 -- Wersja serwera: 10.4.14-MariaDB
 -- Wersja PHP: 7.4.9
 
@@ -28,6 +28,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `klienci` (
+  `id_klienta` int(11) NOT NULL,
   `imie` varchar(15) NOT NULL,
   `email` text NOT NULL,
   `login` varchar(20) NOT NULL,
@@ -38,12 +39,11 @@ CREATE TABLE `klienci` (
 -- Zrzut danych tabeli `klienci`
 --
 
-INSERT INTO `klienci` (`imie`, `email`, `login`, `haslo`) VALUES
-('filip', 'filip@test.pl', 'filip', '1234'),
-('filip1', 'filip1@test.pl', 'filip1', '12345'),
-('filip2', 'filip2@test.pl', 'filip2', '12345567'),
-('Adam', 'adam@jajka.pl', 'blondas', '1234'),
-('Adam', 'adam@jajka.pl', 'blondas', '1234');
+INSERT INTO `klienci` (`id_klienta`, `imie`, `email`, `login`, `haslo`) VALUES
+(1, 'filip', 'filip@test.pl', 'filip', '1234'),
+(2, 'filip1', 'filip1@test.pl', 'filip1', '12345'),
+(3, 'filip2', 'filip2@test.pl', 'filip2', '12345567'),
+(4, 'antonio', 'antonio@zorro.com', 'antonio', 'antonio1');
 
 -- --------------------------------------------------------
 
@@ -52,6 +52,7 @@ INSERT INTO `klienci` (`imie`, `email`, `login`, `haslo`) VALUES
 --
 
 CREATE TABLE `produkty` (
+  `id_produktu` int(11) NOT NULL,
   `kategoria` varchar(15) NOT NULL,
   `nazwa` varchar(20) NOT NULL,
   `cena` int(11) NOT NULL,
@@ -62,16 +63,48 @@ CREATE TABLE `produkty` (
 -- Zrzut danych tabeli `produkty`
 --
 
-INSERT INTO `produkty` (`kategoria`, `nazwa`, `cena`, `ilosc`) VALUES
-('monitor', 'lg', 699, 7),
-('monitor', 'acer', 678, 6),
-('mysz', 'tracer', 19, 19),
-('mysz', 'apex', 289, 10),
-('procesor', 'intel i7', 1159, 15),
-('procesor', 'intel i9', 1379, 12),
-('karta_graf', 'geforce gtx', 959, 27),
-('karta_graf', 'rtx 6000', 22811, 5),
-('głośniki', 'pioneer', 689, 4);
+INSERT INTO `produkty` (`id_produktu`, `kategoria`, `nazwa`, `cena`, `ilosc`) VALUES
+(1, 'monitor', 'lg', 699, 7),
+(2, 'monitor', 'acer', 678, 6),
+(3, 'mysz', 'tracer', 19, 19),
+(4, 'mysz', 'apex', 289, 10),
+(5, 'procesor', 'intel i7', 1159, 15),
+(6, 'procesor', 'intel i9', 1379, 12),
+(7, 'karta_graf', 'geforce gtx', 959, 27),
+(8, 'karta_graf', 'rtx 6000', 22811, 5),
+(9, 'głośniki', 'pioneer', 689, 4);
+
+--
+-- Indeksy dla zrzutów tabel
+--
+
+--
+-- Indeksy dla tabeli `klienci`
+--
+ALTER TABLE `klienci`
+  ADD PRIMARY KEY (`id_klienta`);
+
+--
+-- Indeksy dla tabeli `produkty`
+--
+ALTER TABLE `produkty`
+  ADD PRIMARY KEY (`id_produktu`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT dla tabeli `klienci`
+--
+ALTER TABLE `klienci`
+  MODIFY `id_klienta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT dla tabeli `produkty`
+--
+ALTER TABLE `produkty`
+  MODIFY `id_produktu` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

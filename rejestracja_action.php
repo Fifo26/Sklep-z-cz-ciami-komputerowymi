@@ -52,7 +52,7 @@
         else if($ifok==0){
             if($haslo==$hasloch){
                 if(isset($_POST['reg'])){
-                $wstawu="insert into klienci values ('$imie','$mail','$login','$haslo');";
+                $wstawu="insert into klienci values ('','$imie','$mail','$login','$haslo');";
                 mysqli_query($polaczenie,$wstawu);
                 echo "Konto <b>".$imie."</b> zostało zarejestrowane w sklepie, <a href='login.php'>kliknij</a>, aby się zalogować";
                 

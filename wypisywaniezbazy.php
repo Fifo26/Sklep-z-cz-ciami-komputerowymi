@@ -53,7 +53,7 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <p class="product-description">'.$wiersz['nazwa'].' </p>
+                            <p class="product-description">'.$wiersz['kategoria'].' </p>
                             <div class="row">
                                 <button class="btn btn-light" type="button">Kup teraz!</button>
                                 <div class="col-6">
